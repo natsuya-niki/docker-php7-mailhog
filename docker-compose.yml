@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+  web:
+    build: ./Docker/web/
+    container_name: web
+    ports:
+      - 8080:80
+    volumes:
+      - ./app:/var/www/html
+  mailhog:
+    image: mailhog/mailhog
+    container_name: mail
+    ports:
+      - "8025:8025"
+      - "1025:1025"
+    environment:
+        MH_STORAGE: maildir
+        MH_MAILDIR_PATH: /tmp
+    volumes:
+        - "./tmp/mailhog:/tmp"
