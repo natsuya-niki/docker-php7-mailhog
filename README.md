@@ -31,7 +31,7 @@ http://localhost:8025/
 
 ## 付録
 
-### ホスト名の設定
+### ホスト名の設定a
 
 ```bash
 # /etc/hosts
